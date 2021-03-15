@@ -10,17 +10,29 @@ const li = document.getElementsByClassName("item");
 
 // console.log(imgCaption);
 
+input.addEventListener("keyup", lowerInput);
+
+function lowerInput() {
+  input.value = input.value.toLowerCase();
+  console.log(input.value);
+}
+
 (function filterImages() {
-  for (i = 0; i <= 12; i++) {
+  for (i = 0; i < 12; i++) {
     let imgCaption = document
       .getElementsByTagName("a")
       [i].getAttribute("data-caption");
     imgCaption = imgCaption.toLowerCase();
-    console.log(imgCaption);
+    // console.log(imgCaption);
+
+    if (input.value.includes(imgCaption)) {
+      console.log(imgCaption);
+    }
   }
 })();
 
 /*
+
 input.addEventListener("keyup", lowerInput);
 
 function lowerInput() {
