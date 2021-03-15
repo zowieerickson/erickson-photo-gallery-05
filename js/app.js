@@ -5,8 +5,8 @@ const filter = input.value.toUpperCase();
 const ul = document.getElementsByClassName("gallery");
 const li = document.getElementsByClassName("item");
 
-// const imgCaption = document.getElementsByTagName("a")[0];
-// imgCaption.getAttribute("data-caption");
+let imgCaption = document.getElementsByTagName("a")[0];
+imgCaption.getAttribute("data-caption");
 
 // console.log(imgCaption);
 
@@ -17,20 +17,20 @@ function lowerInput() {
   console.log(input.value);
 }
 
-(function filterImages() {
+function filterImages() {
   for (i = 0; i < 12; i++) {
-    let imgCaption = document
+    imgCaption = document
       .getElementsByTagName("a")
       [i].getAttribute("data-caption");
     imgCaption = imgCaption.toLowerCase();
     // console.log(imgCaption);
-
-    // BUG I'm having trouble here
-    if (input.value.includes(imgCaption)) {
-      console.log(imgCaption);
-    }
   }
-})();
+
+  // BUG I'm having trouble here
+  if (input.value.includes(imgCaption)) {
+    console.log(imgCaption);
+  }
+}
 
 /*
 
