@@ -25,6 +25,7 @@ function lowerInput() {
     imgCaption = imgCaption.toLowerCase();
     // console.log(imgCaption);
 
+    // BUG I'm having trouble here
     if (input.value.includes(imgCaption)) {
       console.log(imgCaption);
     }
