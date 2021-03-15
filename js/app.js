@@ -4,35 +4,35 @@ const input = document.getElementById("search");
 const filter = input.value.toUpperCase();
 const ul = document.getElementsByClassName("gallery");
 const li = document.getElementsByClassName("item");
+const thumbnails = document.getElementsByTagName("img");
 
-let imgCaption = document.getElementsByTagName("a")[0];
-imgCaption.getAttribute("data-caption");
-
-// console.log(imgCaption);
-
+input.addEventListener("keyup", filterImages);
 input.addEventListener("keyup", lowerInput);
 
 function lowerInput() {
   input.value = input.value.toLowerCase();
-  console.log(input.value);
+  // console.log(input.value);
 }
 
 function filterImages() {
   for (i = 0; i < 12; i++) {
-    imgCaption = document
+    let imgCaption = document
       .getElementsByTagName("a")
       [i].getAttribute("data-caption");
     imgCaption = imgCaption.toLowerCase();
-    // console.log(imgCaption);
-  }
-
-  // BUG I'm having trouble here
-  if (input.value.includes(imgCaption)) {
-    console.log(imgCaption);
+    if (imgCaption.includes(input.value)) {
+      thumbnails[i].style.display = "block";
+    } else {
+      thumbnails[i].style.display = "none";
+    }
   }
 }
 
 /*
+ if (input.value.includes(imgCaption)) {
+    console.log(imgCaption);
+  }
+
 
 input.addEventListener("keyup", lowerInput);
 
