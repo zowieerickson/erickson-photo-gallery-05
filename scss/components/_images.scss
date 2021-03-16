@@ -1,0 +1,8 @@
+img {
+  border-radius: 2%;
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.05, 1.05);
+    // transform: translateY(-50%) scale(1.05);
+  }
+}

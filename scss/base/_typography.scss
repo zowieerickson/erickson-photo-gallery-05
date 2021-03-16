@@ -7,11 +7,20 @@
 
 body {
   margin: auto;
-  width: 70%;
-  padding: 20px 0;
+  padding-bottom: 20px;
+  background-color: rgba(225, 255, 250, 0.2);
 }
 
 header {
-  margin: 1em 0 2em 0;
+  margin-bottom: 2em;
+  height: 45vh;
+  width: 100%;
+  background-image: url("../images/road.jpg");
+  background-size: cover;
   display: flex;
+}
+
+// I'm working on centering the gallery BUG
+main {
+  width: 70%;
 }
