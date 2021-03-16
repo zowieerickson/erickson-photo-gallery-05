@@ -3,8 +3,8 @@ img {
   transition: transform 0.5s ease;
   box-shadow: 3px 3px 3px 3px $box-shadow-color;
   &:hover {
-    transform: scale(1.05, 1.05);
-    // transform: translateY(-50%) scale(1.05);
+    // transform: scaleY(20px);
+    transform: translateY(-5%) scale(1.05);
   }
 }
 
