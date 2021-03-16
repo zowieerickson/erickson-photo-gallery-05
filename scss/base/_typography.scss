@@ -1,6 +1,11 @@
+/*               Variables                      */
+$priamry-font: "Raleway", sans-serif;
+$secondary-font: "Open Sans", sans-serif;
+
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -9,18 +14,31 @@ body {
   margin: auto;
   padding-bottom: 20px;
   background-color: rgba(225, 255, 250, 0.2);
+  font-family: $secondary-font;
 }
 
 header {
   margin-bottom: 2em;
   height: 45vh;
   width: 100%;
-  background-image: url("../images/road.jpg");
+  // The image is from @cesarcede from Unplash.com
+  // https://unsplash.com/photos/ZuYtbZjcYzU
+  background-image: url("../images/ocean-rock.jpg");
   background-size: cover;
   display: flex;
+  flex-direction: column;
+  h1 {
+    font-family: $priamry-font;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgb(38, 39, 39);
+    text-shadow: 1px 1px 1px #000;
+  }
 }
 
 // I'm working on centering the gallery BUG
 main {
-  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
