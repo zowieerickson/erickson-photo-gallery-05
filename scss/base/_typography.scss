@@ -1,7 +1,3 @@
-/*               Variables                      */
-$priamry-font: "Raleway", sans-serif;
-$secondary-font: "Open Sans", sans-serif;
-
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
@@ -13,7 +9,7 @@ $secondary-font: "Open Sans", sans-serif;
 body {
   margin: auto;
   padding-bottom: 20px;
-  background-color: rgba(225, 255, 250, 0.2);
+  background-color: $background-color;
   font-family: $secondary-font;
 }
 
@@ -25,15 +21,17 @@ header {
   // https://unsplash.com/photos/ZuYtbZjcYzU
   background-image: url("../images/ocean-rock.jpg");
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+
+  // clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
   h1 {
     font-family: $priamry-font;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
-    letter-spacing: 2px;
-    color: rgb(38, 39, 39);
-    text-shadow: 1px 1px 1px #000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $black;
+    text-shadow: 1px 1px 1px $black;
   }
 }
 
